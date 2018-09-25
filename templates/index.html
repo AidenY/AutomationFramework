@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>自动化测试平台</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"/>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/main.js">
+
+
+
+</head>
+<body>
+
+<div class="table-responsive">
+    <table class="table table-bordered" id="configTable">
+        <thead>
+        <caption>参数配置</caption>
+        <tr>
+            <th>配置项</th>
+            <th>配置值</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="toAddConfig">
+            <td><input name="key" value=""/></td>
+            <td><input name="value" value=""/></td>
+            <td><input type="button" value="保存" id="addConfig"/></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table class="table table-bordered" id="objectTable">
+        <thead>
+        <caption>对象库管理</caption>
+        <tr>
+            <th>页面</th>
+            <th>名字</th>
+            <th>识别值</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="toAddObject">
+            <td><input name="page" value=""/></td>
+            <td><input name="name" value=""/></td>
+            <td><input name="value" value=""/></td>
+            <td><input type="button" value="保存" id="addObject"/></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table class="table table-bordered" id="caseTable">
+        <thead>
+        <caption>测试用例 <a href="javascript: return;" id="runAuto">运行测试</a></caption>
+
+        <tr>
+            <th>用例名称</th>
+            <th>测试对象</th>
+            <th>测试动作</th>
+            <th>测试辅助值</th>
+            <th>操作</th>
+            <td>测试结果</td>
+            <td>测试截图</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="toAddCase">
+            <td><input name="test_case_name" value=""/></td>
+            <td><select name="name" value=""></select></td>
+            <td><select name="action" value=""></select></td>
+            <td><input name="args" value=""/></td>
+            <td><input type="button" value="保存" id="addCase"/></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr/>
+<div>
+    <hi>日志打印结果</hi>
+    <textarea style="width:100%;height:500px;margin-bottom: 200px" id="logTextArea" />
+</div>
+
+</textarea>
+
+<script type="text/javascript" src="../static/test-config.js"></script>
+<script type="text/javascript" src="../static/test-case.js"></script>
+<script type="text/javascript" src="../static/test-object.js"></script>
+<script type="text/javascript" src="../static/main.js"></script>
+</body>
+</html>
